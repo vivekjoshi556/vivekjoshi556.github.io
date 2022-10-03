@@ -14,13 +14,13 @@ const HomeIndex = () => {
                         bringing ideas to Life.
                     </h2>
                     <p className = "mb-6 text-sm w-3/4 text-gray-700">
-                        Currently I'm a student at IIIT Allahabad. My passion is working on unique ideas to make complex looking problems simpler.
+                        Currently I'm a student at IIIT Allahabad. My passion is working on unique ideas to make complex looking problems simpler. { process.env.PUBLIC_URL }
                     </p>
                     <Link to = "/aboutMe" className = "justify-center py-3 px-5 bg-orange-500 text-white rounded-full hover:bg-orange-600 duration-300 cursor-pointer inline-block">
                         Find Out More?
                     </Link>
                 </div>
-                <img className = "inline float-left right-5" src = "/img/profile.png" alt = "profile_not_found" width = "300px" height = "300px" />
+                <img className = "inline float-left right-5" src = { process.env.PUBLIC_URL + "/img/profile.png"} alt = "profile_not_found" width = "300px" height = "300px" />
             </div>
         </motion.div>
     );

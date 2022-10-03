@@ -8,6 +8,7 @@ import ProjectsIndex from "./components/projects/ProjectsIndex"
 import ContactIndex from "./components/contact/ContactIndex"
 import NavIndex from "./components/navigation/NavIndex";
 
+
 function App() {
     const location = useLocation();
     return (
@@ -15,11 +16,11 @@ function App() {
             <NavIndex />
             {/* <AnimatePresence> */}
                 <Routes location = { location } key = { location.key }>
-                    <Route path = "/" element = { <HomeIndex /> } />
-                    <Route path = "/aboutMe" element = { <AboutIndex /> } />
-                    <Route path = "/skills" element = { <SkillsIndex /> } />
-                    <Route path = "/projects" element = { <ProjectsIndex /> } />
-                    <Route path = "/contactMe" element = { <ContactIndex /> } />
+                    <Route path = { process.env.PUBLIC_URL + "/" } element = { <HomeIndex /> } />
+                    <Route path = { process.env.PUBLIC_URL + "/aboutMe"} element = { <AboutIndex /> } />
+                    <Route path = { process.env.PUBLIC_URL + "/skills"} element = { <SkillsIndex /> } />
+                    <Route path = { process.env.PUBLIC_URL + "/projects"} element = { <ProjectsIndex /> } />
+                    <Route path = { process.env.PUBLIC_URL + "/contactMe"} element = { <ContactIndex /> } />
                     {/* <Route path = "/login" element = { !authCntxt.isLoggedIn ? <LoginIndex /> : <Navigate to = "/" /> } /> */}
                     {/* <Route path = "*" element = { <NotFound /> }></Route> */}
                 </Routes>
