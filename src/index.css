@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Silkscreen&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.color1 {color: #1f306e;} .bg1 {background-color: #1f306e;}
+.color2 {color: #553772;} .bg2 {background-color: #553772;}
+.color3 {color: #8f3b76;} .bg3 {background-color: #8f3b76;}
+.color4 {color: #c7417b;} .bg4 {background-color: #c7417b;}
+.color5 {color: #f5487f;} .bg5 {background-color: #f5487f;}
+.color6 {color: #F87C68;} .bg6 {background-color: #F87C68;}
+.color7 {color: #FFB85B;} .bg7 {background-color: #FFB85B;}
+.color8 {color: #F9F871;} .bg8 {background-color: #F9F871;}
+
+body {
+    font-size: 14px; 
+}
+
+h1, h2, h3 {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+p, a {
+    font-family: "Fira Sans";
+}
+
+.silkscreen {
+    font-family: silkscreen;
+}
+
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.tagcloud {
+    display: inline-block;
+    font-weight: bold;
+}
