@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const MobileNavItem = props =>  {
     const fadeInVariant = {
@@ -10,27 +11,25 @@ const MobileNavItem = props =>  {
             opacity: 1,
             y: 0,
             transition: {
-                delay: props.duration
+                delay: props.delay
             }
         },
         exit: {
             opacity: 0,
             y: 50,
             transition: {
-                delay: 0.6 - props.duration
+                delay: 0.5 - props.delay
             }
         }
     };
 
     return (
-        <motion.a 
-            className = "text-white text-5xl font-bold mb-4 hover:text-underline"
-            variants = { fadeInVariant }
-            onClick = { props.toggleMenuHandler }
-            href = { props.href }
-        >
-            { props.children }
-        </motion.a>
+        <motion.div variants = { fadeInVariant }  className = "mb-4"
+            initial = "initial" animate = "animate" exit = "exit">
+            <Link onClick = { props.onClick } className = "text-white font-mono sm:text-4xl font-bold hover:text-5xl text-4xl duration-500" to = { process.env.PUBLIC_URL + props.href }> 
+                >> { props.children }
+            </Link>
+        </motion.div>
     );
 }
 

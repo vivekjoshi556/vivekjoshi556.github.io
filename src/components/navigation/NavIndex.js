@@ -11,7 +11,7 @@ const rollInVariant = {
         x: 0,
         transform: "rotate(-180deg)",
         transition: {
-            delay: 2,
+            delay: .6,
         }
     },
 }
@@ -21,7 +21,6 @@ const NavIndex = () => {
     const toggleMenuHandler = () => {
         // const menuBtn = document.getElementById("menuBtn");
         toggleMenu(!isOpen);
-        console.log(isOpen);
         if(isOpen) 
             document.getElementsByTagName("body")[0].style.overflow = "visible";
         else
@@ -48,8 +47,8 @@ const NavIndex = () => {
                     </ul>
                 </div>
                 <div className = "w-full block md:hidden relative p-2">
-                    <motion.button variants = { rollInVariant } initial = "initial" animate = "animate" className = "navbar-burger duration-75 ease-in-out flex items-center rounded-full focus:outline-none relative top-px ml-auto border border-gray-400 p-2 px-3" onClick = { toggleMenuHandler } id = "menuBtn" style = {{ zIndex: 9 }}>
-                        <svg className = "block h-5 w-3 text-gray-800" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                    <motion.button variants = { rollInVariant } initial = "initial" animate = "animate" className = "duration-75 ease-in-out flex items-center rounded-full focus:outline-none relative top-px ml-auto border border-gray-400 p-2 px-3" onClick = { toggleMenuHandler } id = "menuBtn" style = {{ zIndex: 9 }}>
+                        <svg className = "block h-5 w-3 text-gray-800" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="white">
                             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
                         </svg>
                     </motion.button>

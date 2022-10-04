@@ -1,4 +1,3 @@
-// import { motion, AnimatePresence } from "framer-motion";
 import { Route, Routes, useLocation } from "react-router-dom";
 
 import HomeIndex from "./components/home/HomeIndex"
@@ -12,16 +11,15 @@ import NavIndex from "./components/navigation/NavIndex";
 function App() {
     const location = useLocation();
     return (
-        <div className = "App">
+        <div className = "App bg0">
             <NavIndex />
-            {/* <AnimatePresence> */}
+            {/* <AnimatePresence mode = "wait"> */}
                 <Routes location = { location } key = { location.key }>
                     <Route path = { process.env.PUBLIC_URL + "/" } element = { <HomeIndex /> } />
                     <Route path = { process.env.PUBLIC_URL + "/aboutMe"} element = { <AboutIndex /> } />
                     <Route path = { process.env.PUBLIC_URL + "/skills"} element = { <SkillsIndex /> } />
                     <Route path = { process.env.PUBLIC_URL + "/projects"} element = { <ProjectsIndex /> } />
                     <Route path = { process.env.PUBLIC_URL + "/contactMe"} element = { <ContactIndex /> } />
-                    {/* <Route path = "/login" element = { !authCntxt.isLoggedIn ? <LoginIndex /> : <Navigate to = "/" /> } /> */}
                     {/* <Route path = "*" element = { <NotFound /> }></Route> */}
                 </Routes>
             {/* </AnimatePresence> */}
