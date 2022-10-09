@@ -16,7 +16,7 @@ const HomeIndex = () => {
                     <p className = "mb-6 text-sm w-3/4 text-white md:text-xs">
                         Currently I'm a student at IIIT Allahabad. My passion is working on unique ideas to make complex looking problems simpler.
                     </p>
-                    <Link to = "/aboutMe" className = "justify-center py-3 px-5 bg-orange-500 text-white rounded-full hover:bg-orange-600 duration-300 cursor-pointer inline-block">
+                    <Link to = { process.env.PUBLIC_URL + "/aboutMe" } className = "justify-center py-3 px-5 bg-orange-500 text-white rounded-full hover:bg-orange-600 duration-300 cursor-pointer inline-block">
                         Let's Jump To Coding.
                     </Link>
                 </div>

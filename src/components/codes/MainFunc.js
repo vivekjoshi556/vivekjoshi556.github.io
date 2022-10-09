@@ -8,40 +8,37 @@ import Console from "./Console";
 const MainFunc = () => {
     const [exec, runExec] = useState({executing: false, count: 0, msgs: []});
 
+    const sendMessage = async(type, msg, waitFor = 1000, executing = true) => {
+        runExec(exec => {
+            exec.msgs[exec.count] = {
+                "type": type,
+                "msg": msg
+            };
+            exec.count = exec.count + 1;
+            exec.executing = executing;
+            return { ...exec };
+        });
+        const localConsole = document.getElementById("console");
+        await new Promise(r => setTimeout(r, waitFor));
+        localConsole.scrollTop = localConsole.scrollHeight;
+    }
+
     const execute = async () => {
-        runExec(temp => {
-            temp.msgs[temp.count] = {
-                "type": "msg",
-                "msg": "Executing Your Code..."
-            };
-            temp.count = exec.count + 1;
-            temp.executing = true;
-            return { ...temp, ...temp };
-        });
-        
-        await new Promise(r => setTimeout(r, 1000));
-        
-        
-        runExec(temp => {
-            temp.msgs[temp.count] = {
-                "type": "warning",
-                "msg": "['Unemployed']"
-            };
-            temp.count = exec.count + 1;
-            temp.executing = false;
-            
-            return { ...temp, ...temp }
-        });
+        await sendMessage("msg", "Executing Your Code...");
+        await sendMessage("msg", "Studying", 500);
+        await sendMessage("msg", "Playing Games");
+        await sendMessage("warning", "['Unemployed']", 1000, false);
     }
 
     const clearConsole = () => {
+        console.log("called to clear console");
         runExec(temp => {
             return {...temp, msgs: []};
         });
     }
 
     return (
-        <motion.div variants = { templateVariant } initial = "initial" animate = "animate" className = "text-gray-300 text-sm code">
+        <motion.div variants = { templateVariant } initial = "initial" animate = "animate" className = "text-gray-200 text-sm code aboveNoise">
             <motion.div variants = { codeVariant }>
                 <span className = "text-gray-400 indent0">1</span>
                 <span className = "keyword">void </span>
@@ -91,13 +88,13 @@ const MainFunc = () => {
                     Clear Console
                 </button>
                 {
-                    !exec.executing && <button onClick = { execute } className = "bg-green-600 text-white hover:bg-green-700 duration-200 py-1 mt-1 px-3 ml-1 rounded mb-2">
+                    !exec.executing && <button onClick = { execute } className = "bg-green-600 text-white hover:bg-green-700 duration-200 py-1 mt-1 px-3 ml-1 rounded mb-2 aboveNoise">
                         Execute
                     </button>
                 }
                 {
                     exec.executing && 
-                    <button className = "bg-green-600 text-white hover:bg-green-600 opacity-60 py-1 mt-1 px-3 ml-1 rounded mb-2 cursor-not-allowed">
+                    <button className = "bg-green-600 text-white hover:bg-green-600 opacity-60 py-1 mt-1 px-3 ml-1 rounded mb-2 cursor-not-allowed aboveNoise">
                         <FontAwesomeIcon className = "fa-spin w-4 dark:text-gray-300" icon = { faGear }></FontAwesomeIcon> Execute
                     </button>
                 }
