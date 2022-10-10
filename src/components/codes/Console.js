@@ -11,8 +11,8 @@ const Console = props => {
                             { 
                                 (key.type === "msg" && <span>{ key.msg }</span>) ||  
                                 (key.type === "result" && <span>{ key.msg }</span>) || 
-                                (key.type === "warning" && <span> { <span className = "bg-yellow-700 p-1 rounded text-xs">Warning:</span> } { " " +key.msg } </span>) ||
-                                (key.type === "skill" && <span> { "Importing Skill: " } <span className = "bg-green-800 p-1 text-xs rounded">{ key.msg } </span></span>)
+                                (key.type === "warning" && <span> { <span className = "bg-yellow-700 p-1 rounded text-xs">Warning:</span> } { " " + key.msg } </span>) ||
+                                (key.type === "skill" && <span> { <span className = "bg-green-800 p-1 text-xs rounded">Importing Skill:</span>} { " " + key.msg } </span>)
                             }
                         </div>
                     )

@@ -11,6 +11,7 @@ module.exports = {
         extend: {
             display: ['dark']
         },
+        backgroundSize: ['hover']
     },
     plugins: [],
 }

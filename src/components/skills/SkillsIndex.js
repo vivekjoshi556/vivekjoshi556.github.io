@@ -2,9 +2,13 @@ import { AnimatePresence, motion } from "framer-motion";
 import { containerVariant } from "../variants";
 import SkillBox from "./SkillBox";
 import Console from "../codes/Console";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const SkillsIndex = () => {
+    useEffect(() => {
+        document.title = "My Skills";
+    }, []);
+
     const [exec, runExec] = useState({executing: false, count: 0, msgs: []});
 
     const sendMessage = async(type, msg, waitFor = 1000, executing = true) => {

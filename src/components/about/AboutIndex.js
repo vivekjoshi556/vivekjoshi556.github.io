@@ -1,8 +1,12 @@
 import { AnimatePresence, motion } from "framer-motion";
+import { useEffect } from "react";
 import MainFunc from "../codes/MainFunc";
 import { containerVariant } from "../variants";
 
 const AboutIndex = () => {
+    useEffect(() => {
+        document.title = "About Me";
+    }, []);
     return (
         <AnimatePresence>
             <motion.div key = "aboutIndex" className = "h-screen w-4/5 mx-auto" variants = { containerVariant } initial = "initial" animate = "animate" exit = "exit">

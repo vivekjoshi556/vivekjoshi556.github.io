@@ -19,7 +19,6 @@ const rollInVariant = {
 const NavIndex = () => {
     const [isOpen, toggleMenu] = useState(false);
     const toggleMenuHandler = () => {
-        // const menuBtn = document.getElementById("menuBtn");
         toggleMenu(!isOpen);
         if(isOpen) 
             document.getElementsByTagName("body")[0].style.overflow = "visible";
@@ -41,7 +40,7 @@ const NavIndex = () => {
                                 <NavItem duration = "0.2" link = "/aboutMe">About Me</NavItem>
                                 <NavItem duration = "0.3" link = "/skills">Skills</NavItem>
                                 <NavItem duration = "0.4" link = "/projects">Projects</NavItem>
-                                <NavItem duration = "0.5" link = "/contactMe">Support</NavItem>
+                                <NavItem duration = "0.5" link = "/contactMe">Contact Me</NavItem>
                             </ul>
                         </li>
                     </ul>

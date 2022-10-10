@@ -1,8 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AnimatePresence, motion } from "framer-motion";
+import { useEffect } from "react";
 import { containerVariant } from "../variants";
 
 const ContactIndex = () => {
+    useEffect(() => {
+        document.title = "Get in Touch";
+    }, []);
+
     return (
         <AnimatePresence>
             <motion.div key = "aboutIndex" className = "w-screen h-screen w-4/5 mx-auto" variants = { containerVariant } initial = "init" animate = "animate" exit = "exit">

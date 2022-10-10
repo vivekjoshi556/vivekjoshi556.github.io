@@ -2,8 +2,12 @@ import { motion } from "framer-motion";
 import { containerVariant } from "../variants";
 
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const HomeIndex = () => {
+    useEffect(() => {
+        document.title = "Welcome - Vivek Joshi";
+    }, []);
     return (
         <motion.div className = "w-screen h-screen" variants = { containerVariant } initial = "initial" animate = "animate" exit = "exit">
             <div className = "float-left w-full h-full flex justify-center items-center">

@@ -7,7 +7,6 @@ import ProjectsIndex from "./components/projects/ProjectsIndex"
 import ContactIndex from "./components/contact/ContactIndex"
 import NavIndex from "./components/navigation/NavIndex";
 
-
 function App() {
     const location = useLocation();
     return (

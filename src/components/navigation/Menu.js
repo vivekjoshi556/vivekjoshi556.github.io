@@ -50,7 +50,7 @@ const Menu = (props) => {
                             <MobileNavItem delay = "0.2" onClick = { props.toggleMenuHandler } href = "/aboutMe">About Me</MobileNavItem>
                             <MobileNavItem delay = "0.3" onClick = { props.toggleMenuHandler } href = "/skills">Skills</MobileNavItem>
                             <MobileNavItem delay = "0.4" onClick = { props.toggleMenuHandler } href = "/projects">Projects</MobileNavItem>
-                            <MobileNavItem delay = "0.5" onClick = { props.toggleMenuHandler } href = "/contactMe">Support</MobileNavItem>
+                            <MobileNavItem delay = "0.5" onClick = { props.toggleMenuHandler } href = "/contactMe">Contact Me</MobileNavItem>
                         </div>
                     </motion.div>
                 </motion.div>
