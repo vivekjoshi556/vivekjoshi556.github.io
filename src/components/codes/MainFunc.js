@@ -31,7 +31,6 @@ const MainFunc = () => {
     }
 
     const clearConsole = () => {
-        console.log("called to clear console");
         runExec(temp => {
             return {...temp, msgs: []};
         });

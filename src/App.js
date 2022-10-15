@@ -6,14 +6,15 @@ import SkillsIndex from "./components/skills/SkillsIndex";
 import ProjectsIndex from "./components/projects/ProjectsIndex"
 import ContactIndex from "./components/contact/ContactIndex"
 import NavIndex from "./components/navigation/NavIndex";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
     const location = useLocation();
     return (
         <div className = "App bg0">
             <NavIndex />
-            {/* <AnimatePresence mode = "wait"> */}
-                <Routes location = { location } key = { location.key }>
+            <AnimatePresence exitBeforeEnter>
+                <Routes location = { location } key = { location.pathname }>
                     <Route path = { process.env.PUBLIC_URL + "/" } element = { <HomeIndex /> } />
                     <Route path = { process.env.PUBLIC_URL + "/aboutMe"} element = { <AboutIndex /> } />
                     <Route path = { process.env.PUBLIC_URL + "/skills"} element = { <SkillsIndex /> } />
@@ -21,7 +22,7 @@ function App() {
                     <Route path = { process.env.PUBLIC_URL + "/contactMe"} element = { <ContactIndex /> } />
                     {/* <Route path = "*" element = { <NotFound /> }></Route> */}
                 </Routes>
-            {/* </AnimatePresence> */}
+            </AnimatePresence>
             <div className = "noise"></div>
         </div>
     );
