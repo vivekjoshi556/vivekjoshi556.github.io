@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { skills, containerVariant } from "../variants";
+import { containerVariant } from "../variants";
+import { skills } from "../skills/Loader";
 import SkillBox from "./SkillBox";
 import Console from "../codes/Console";
 import { useEffect, useState } from "react";
@@ -27,8 +28,13 @@ const SkillsIndex = () => {
             localConsole.scrollTop = localConsole.scrollHeight;
     }
 
-    const loadSkill = async (val) => {
-        await sendMessage("skill", val);
+    const loadSkill = async (loader) => {
+        if(exec.executing) return;
+        console.log(loader);
+        var len = loader.length - 1;
+        for(var i = 0; i < len; i++)
+            await sendMessage(loader[i]["type"], loader[i]["msg"], loader[i]["waitFor"]);
+        await sendMessage(loader[len]["type"], loader[len]["msg"], loader[len]["waitFor"], false);
     }
 
     const clearConsole = () => {
@@ -65,7 +71,7 @@ const SkillsIndex = () => {
                     <motion.div variants = { skillBoxVariant } className = "w-full flex items-center flex-wrap gap-x-4">
                         {
                             skills.map((skill, i) =>
-                                <SkillBox key = { "skill_" + i } delay = { i * 0.04 } onClick = { () => loadSkill(skill.name) } src = { skill.src } name = { skill.name } />
+                                <SkillBox executing = { exec.executing } key = { "skill_" + i } delay = { i * 0.04 } onClick = { () => loadSkill(skill.loader) } src = { skill.src } name = { skill.name } />
                             )
                         }
                     </motion.div>

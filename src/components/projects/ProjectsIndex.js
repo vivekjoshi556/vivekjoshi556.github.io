@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { containerVariant } from "../variants";
 import ProjectBox from "./ProjectBox";
+import { projects } from "./Projects";
 
 const ProjectsIndex = () => {
     useEffect(() => {
@@ -13,10 +14,11 @@ const ProjectsIndex = () => {
                 <h2 className = "text-2xl font-bold mb-4 font-mono silkscreen glitch text-white w-full" data-text = "Project Index">Project Index</h2>
                 <br />
                 <div className="flex flex-wrap">
-                    <ProjectBox />
-                    <ProjectBox left = { false } />
-                    <ProjectBox />
-                    <ProjectBox left = { false } />
+                    {
+                        projects.map((project, i) => 
+                            <ProjectBox key = { "project_" + i } project = { project } pos = { i } left = { Boolean(i % 2) } />
+                        )
+                    }
                 </div>
             </div>
         </motion.div>

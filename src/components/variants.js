@@ -1,19 +1,3 @@
-export const skills = [
-    {name: "C++ Programming", "src": "/img/cpp.png"},
-    {name: "C Programming", "src": "/img/c.png"},
-    {name: "Javascript", "src": "/img/js.png"},
-    {name: "Python", "src": "/img/python.png"},
-    {name: "Php", "src": "/img/php.png"},
-    {name: "Git", "src": "/img/git.png"},
-    {name: "Github", "src": "/img/github.png"},
-    {name: "ThunderClient", "src": "/img/thunderclient.png"},
-    {name: "Laravel", "src": "/img/laravel.svg"},
-    {name: "Reactjs", "src": "/img/reactjs.png"},
-    {name: "ExpressJS", "src": "/img/expressjs.png"},
-    {name: "MySQL", "src": "/img/mysql.png"},
-    {name: "Machine Learning", "src": "/img/ml_dark.png"}
-];
-
 export const templateVariant = { 
     initial: {}, 
     animate: {
