@@ -15,7 +15,7 @@ const ProjectBox = props => {
                     <p className=" "> { project.description } </p>
                 </div>
                 <div className = "font-medium pl-1">
-                    <div className = "text-gray-800 mb-2">Tech Used</div>
+                    <div className = "text-gray-300 mb-2">Tech Used</div>
                     <div className = "flex items-center gap-2 flex-wrap">
                         {
                             project.tags.map((tag, i) => 
@@ -25,7 +25,7 @@ const ProjectBox = props => {
                     </div>
                 </div>
                 <div className = "flex justify-end">
-                    <a href = { project.link } target = "_blank" className = "border bg-orange-400 hover:bg-orange-500 duration-500 text-white px-4 py-2 rounded-full">Find Out More</a>
+                    <a href = { project.link } target = "_blank" className = "border border-orange-200 bg-orange-400 hover:bg-orange-500 duration-500 text-white px-4 py-2 rounded-full">Read More...</a>
                 </div>
             </div>
             {

@@ -79,7 +79,7 @@ const SkillsIndex = () => {
                 <div className = "lg:w-8/12 md:w-5/12 w-full">
                     <Console msgs = { exec.msgs } />
                     <div className = "flex justify-end">
-                        <button onClick = { clearConsole } className = "bg-green-600 text-white hover:bg-green-700 duration-200 py-1 mt-1 py-2 px-3 ml-auto rounded mb-2">
+                        <button onClick = { clearConsole } className = "bg-green-600 text-white hover:bg-green-700 duration-200 mt-1 py-2 px-3 ml-auto rounded mb-2">
                             Clear Console
                         </button>
                     </div>

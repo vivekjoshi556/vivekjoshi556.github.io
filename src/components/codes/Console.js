@@ -12,10 +12,10 @@ const Console = props => {
                                 (key.type === "result" && <span>{ key.msg }</span>) || 
                                 (key.type === "warning" && <span> { <span className = "bg-yellow-700 p-1 rounded text-xs">Warning:</span> } { " " + key.msg } </span>) ||
                                 (key.type === "skill" && <span> { <span className = "bg-green-800 p-1 text-xs rounded">Importing Skill:</span>} { " " + key.msg } </span>) || 
-                                (key.type === "dependency" && <span> { <span className = "bg-zinc-700 p-1 text-xs rounded">Importing Depenedencies:</span>} { " " + key.msg } </span>) || 
+                                (key.type === "dependency" && <span> { <span className = "bg-zinc-700 p-1 text-xs rounded">Dependencies:</span>} { " " + key.msg } </span>) || 
                                 (key.type === "learning" && <span> { <span className = "bg-cyan-900 p-1 text-xs rounded">Learn Concepts:</span>} { " " + key.msg } </span>) || 
-                                (key.type === "ongoing" && <span> { <span className = "bg-red-500 p-1 text-xs rounded">Learn Concepts:</span>} { " " + key.msg } </span>) || 
-                                (<span>{ key.msg }</span>)
+                                (key.type === "status" && <span> { <span className = "bg-red-500 p-1 text-xs rounded">Current Status:</span>} { " " + key.msg } </span>) || 
+                                (key.type === "link" && <span dangerouslySetInnerHTML = {{ __html: key.msg }}></span>)
                             }
                         </div>
                     )
