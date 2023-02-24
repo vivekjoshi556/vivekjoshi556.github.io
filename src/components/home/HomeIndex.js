@@ -24,7 +24,7 @@ const HomeIndex = () => {
                         Let's Jump To Coding.
                     </Link>
                 </div>
-                <img className = "inline float-left lg:w-64	md:w-52 relative right-12 lg:right-16 hidden md:block right-5" src = { process.env.PUBLIC_URL + "/img/profile.png"} alt = "profile_not_found" />
+                <img className = "md:inline float-left lg:w-64 md:w-52 relative md:right-12 lg:right-16 hidden right-5" src = { process.env.PUBLIC_URL + "/img/profile.png"} alt = "profile_not_found" />
             </div>
         </motion.div>
     );
