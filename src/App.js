@@ -13,7 +13,7 @@ function App() {
     return (
         <div className = "App bg0">
             <NavIndex />
-            <AnimatePresence exitBeforeEnter>
+            <AnimatePresence mode="wait">
                 <Routes location = { location } key = { location.pathname }>
                     <Route path = { process.env.PUBLIC_URL + "/" } element = { <HomeIndex /> } />
                     <Route path = { process.env.PUBLIC_URL + "/aboutMe"} element = { <AboutIndex /> } />

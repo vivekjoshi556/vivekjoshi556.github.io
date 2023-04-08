@@ -26,7 +26,7 @@ const NavItem = props => {
     
     return (
         <motion.li variants = { fadeInVariant }  className = "lg:flex" initial = "initial" animate = "animate" exit = "exit">
-            <Link onClick = { props.onClick } className = "font-bold font-mono block py-2 px-4 text-xs text-gray-300 hover:backdrop-blur-sm hover:bg-white/30 hover:text-white rounded" to = { process.env.PUBLIC_URL + props.link }> 
+            <Link onClick = { props.onClick } className = "font-bold font-mono block py-2 px-4 text-xs hover:backdrop-blur-sm duration-500 text-gray-300 hover:bg-white/30 hover:text-white rounded" to = { process.env.PUBLIC_URL + props.link }> 
                 { props.children }
             </Link>
         </motion.li>

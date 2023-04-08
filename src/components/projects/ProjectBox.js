@@ -1,21 +1,22 @@
 const ProjectBox = props => {
     const project = props.project;
+    const btnProps = "bg-[" + project.color + "A0] hover:bg-[" + project.color + "] duration-500 text-white px-4 py-2 rounded-full focus:outline-none";
     return (
-        <div className = "md:flex text-gray-200 rounded-xl p-8 md:p-0 aboveNoise mb-10">
+        <div className = "md:flex text-gray-200 rounded-xl p-8 md:p-0 aboveNoise mb-24 w-full">
             {
                 props.left && 
                     <div className = "h-40 md:w-5/6 bg-center md:h-auto md:rounded-l-xl rounded-lg mx-auto bg-cover bg-no-repeat md:bg-center cursor-pointer" style = {{
                         "backgroundImage": `url(${process.env.PUBLIC_URL + project.img})`
                     }}></div>
             }
-            <div className = "pt-4 md:pt-6 md:pb-6 md:px-8 text-center md:text-left space-y-4">
+            <div className = "pt-4 md:pt-6 md:pb-6 md:px-8 text-center md:text-left space-y-4" style = {{ "width": "inherit" }}>
                 <div className = "pl-1">
-                    <p className = "text-lg font-medium"> { project.name } </p>
+                    <p className = "text-xl font-bold"> { project.name } </p>
                     <hr className = "relative right-1 mb-3" />
                     <p className=" "> { project.description } </p>
                 </div>
                 <div className = "font-medium pl-1">
-                    <div className = "text-gray-300 mb-2">Tech Used</div>
+                    <div className = "text-gray-300 mb-2">Keywords</div>
                     <div className = "flex items-center gap-2 flex-wrap">
                         {
                             project.tags.map((tag, i) => 
@@ -25,7 +26,7 @@ const ProjectBox = props => {
                     </div>
                 </div>
                 <div className = "flex justify-end">
-                    <a href = { project.link } target = "_blank" className = "border border-orange-200 bg-orange-400 hover:bg-orange-500 duration-500 text-white px-4 py-2 rounded-full">Read More...</a>
+                    <button onClick = { () => props.modalHandler(project.codename) } className = { btnProps }> Read More... </button>
                 </div>
             </div>
             {

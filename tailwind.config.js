@@ -14,4 +14,5 @@ module.exports = {
         backgroundSize: ['hover']
     },
     plugins: [],
+    safelist: [ 'hover:bg-[#cc3534]', 'hover:bg-[#00a547]', 'hover:bg-[#0d51ae]', 'bg-[#cc3534A0]', 'bg-[#00a547A0]', 'bg-[#0d51aeA0]' ]
 }

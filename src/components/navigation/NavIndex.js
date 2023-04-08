@@ -28,7 +28,7 @@ const NavIndex = () => {
     
     return (
         <>
-            <nav style = {{ "width": "98%", "marginLeft": "1%", "marginRight": "1%", "marginTop": "1%", "zIndex": "10" }} className = "fixed flex text-gray-600 xl:px-10">
+            <nav style = {{ "width": "98%", "marginLeft": "1%", "marginRight": "1%", "marginTop": "1%", "zIndex": "10" }} className = "fixed flex text-gray-600 xl:px-10 bg-[#2b2f38d1]">
                 <div className = "hidden md:flex p-2 justify-center items-center w-full">
                     <a className = "text-2xl leading-none" href="http://localhost:3000/">
                         <img src="/images/profile.png" alt="" width="auto" style= {{"height": "3rem"}} />

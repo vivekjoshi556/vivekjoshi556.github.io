@@ -47,7 +47,7 @@ const GithubLoader = [
 const ThunderClientLoader = [
     {"type": "skill", "msg": "ThunderClient", "waitFor": "1000"},
     {"type": "dependency", "msg": "Checking for Backend language or frameworks.", "waitFor": "1000"},
-    {"type": "result", "msg": "2 related frameworks found: Laravel & ExpressJS.", "waitFor": "500"},
+    {"type": "msg", "msg": "2 related frameworks found: Laravel & ExpressJS.", "waitFor": "500"},
     {"type": "learning", "msg": "Sending requests & Settings Header", "waitFor": "1000"},
     {"type": "learning", "msg": "Configuring Environment For Projects.", "waitFor": "1000"},
     {"type": "link", "msg": "This skill is part of <a target = \"_blank\" href = \"https://google.com\" class = \"underline\"> SI Program</a>.", "waitFor": "500"}
