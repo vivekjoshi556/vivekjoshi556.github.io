@@ -26,7 +26,7 @@ const MobileNavItem = props =>  {
     return (
         <motion.div variants = { fadeInVariant }  className = "mb-4"
             initial = "initial" animate = "animate" exit = "exit">
-            <Link onClick = { props.onClick } className = "text-white font-mono sm:text-4xl font-bold hover:px-2 text-4xl duration-500" to = { process.env.PUBLIC_URL + props.href }> 
+            <Link onClick = { props.onClick } className = "text-white font-mono text-2xl font-bold hover:px-2 duration-500" to = { process.env.PUBLIC_URL + props.href }> 
                 { ">> " + props.children }
             </Link>
         </motion.div>

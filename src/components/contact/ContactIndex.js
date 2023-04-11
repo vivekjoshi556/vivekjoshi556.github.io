@@ -9,10 +9,10 @@ const ContactIndex = () => {
     }, []);
 
     return (
-        <motion.div key = "aboutIndex" className = "w-screen h-screen w-4/5 mx-auto" variants = { containerVariant } initial = "init" animate = "animate" exit = "exit">
+        <motion.div key = "aboutIndex" className = "min-h-screen w-4/5 mx-auto" variants = { containerVariant } initial = "init" animate = "animate" exit = "exit">
             <div className = "w-full dark:bg-gray-800 h-full pt-40 flex justify-center">
                 <div className = "w-10/12 md:w-7/12 flex flex-col">
-                    <h2 className = "text-2xl font-bold font-mono silkscreen text-white glitch" data-text = "Contact Me.">Contact Me.</h2>
+                    <h2 className = "text-3xl font-bold font-mono silkscreen text-white glitch" data-text = "Contact Me.">Contact Me.</h2>
                     <hr className = "bg-white mb-4" />
                     <div className = "text-gray-100 text-lg general"> 
                         Say hi: <a rel="noreferrer" target="_blank" className = "code function" href = "mailto:vivekjoshi556@gmail.com">mail()</a>

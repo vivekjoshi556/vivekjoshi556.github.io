@@ -70,9 +70,8 @@ const ProjectsIndex = () => {
     return (
         <motion.div className = "min-h-screen mx-auto relative" variants = { containerVariant } initial = "initial" animate = "animate" exit = "exit">
             {/*  */}
-            <div className = "w-full dark:bg-gray-800 md:px-10 lg:px-32 px-8 h-full pt-32 items-center flex flex-col">
-                <h2 className = "text-2xl font-bold mb-4 font-mono silkscreen glitch text-white w-full" data-text = "Project Index">Project Index</h2>
-                <br />
+            <div className = "w-full dark:bg-gray-800 md:px-10 lg:px-32 px-8 h-full pt-24 md:pt-32 items-center flex flex-col">
+                <h2 className = "text-3xl font-bold md:mb-4 font-mono silkscreen glitch text-white w-full" data-text = "Project Index">Project Index</h2>
                 <div className="flex flex-wrap">
                     {
                         projects.map((project, i) => 

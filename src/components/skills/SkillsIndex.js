@@ -62,10 +62,10 @@ const SkillsIndex = () => {
     }
 
     return (
-        <motion.div key = "aboutIndex" className = "h-screen w-11/12 mx-auto" variants = { containerVariant } initial = "initial" animate = "animate" exit = "exit">
+        <motion.div key = "aboutIndex" className = "min-h-screen w-11/12 mx-auto flex items-center" variants = { containerVariant } initial = "initial" animate = "animate" exit = "exit">
             <div className = "w-full dark:bg-gray-800 h-full items-center flex justify-center gap-4 flex-wrap md:flex-nowrap">
                 <div className = "lg:w-8/12 md:w-7/12 w-full flex items-center flex-wrap gap-x-4">
-                    <div className="w-full mb-4">
+                    <div className="w-full mb-4 pt-24 md:pt-0">
                         <h2 className = "text-3xl font-bold glitch silkscreen text-gray-200 inline-block" data-text = "Skills.">Skills.</h2>
                     </div>
                     <motion.div variants = { skillBoxVariant } className = "w-full flex items-center flex-wrap gap-x-4">
