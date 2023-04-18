@@ -20,9 +20,10 @@
     <script>
       // This script sets the URL to the requested URL after the initial load to enable client-side routing.
       const url = window.location.href;
-      if (url.includes("/YOUR_BASENAME_HERE")) {
-        const baseUrl = url.split("/YOUR_BASENAME_HERE")[0];
-        window.history.replaceState({}, document.title, `${baseUrl}/YOUR_BASENAME_HERE${window.location.pathname}`);
+      if (url.includes("vivekjoshi556.github.io")) {
+        const baseUrl = url.split("vivekjoshi556.github.io")[0];
+        console.log(baseUrl, `${baseUrl}/vivekjoshi556.github.io${window.location.pathname}`);
+        window.history.replaceState({}, document.title, `${baseUrl}/vivekjoshi556.github.io${window.location.pathname}`);
       }
     </script>
   </head>
