@@ -12,4 +12,21 @@
         }
         </script>
     </body>
+</html><!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Page Not Found</title>
+    <script>
+      // This script sets the URL to the requested URL after the initial load to enable client-side routing.
+      const url = window.location.href;
+      if (url.includes("/YOUR_BASENAME_HERE")) {
+        const baseUrl = url.split("/YOUR_BASENAME_HERE")[0];
+        window.history.replaceState({}, document.title, `${baseUrl}/YOUR_BASENAME_HERE${window.location.pathname}`);
+      }
+    </script>
+  </head>
+  <body>
+    <p>Page not found.</p>
+  </body>
 </html>
