@@ -1,19 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
+        <meta http-equiv="refresh" content="0;url=/">
         <title>Page Not Found</title>
-        <script>
-            // This script sets the URL to the requested URL after the initial load to enable client-side routing.
-            const url = window.location.href;
-            if (url.includes("vivekjoshi556.github.io")) {
-                const baseUrl = url.split("vivekjoshi556.github.io")[0];
-                console.log(baseUrl, `${baseUrl}vivekjoshi556.github.io${window.location.pathname}`);
-                window.history.replaceState({}, document.title, `${baseUrl}/vivekjoshi556.github.io${window.location.pathname}`);
-            }
-        </script>
     </head>
     <body>
-        <p>Page not found.</p>
+        Redirecting to homepage...
     </body>
 </html>
