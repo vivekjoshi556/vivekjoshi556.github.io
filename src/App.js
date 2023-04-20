@@ -15,12 +15,12 @@ function App() {
             <NavIndex />
             <AnimatePresence mode="wait">
                 <Routes location = { location } key = { location.pathname }>
-                    <Route path = { process.env.PUBLIC_URL + "/" } element = { <HomeIndex /> } />
-                    <Route path = { process.env.PUBLIC_URL + "/aboutMe"} element = { <AboutIndex /> } />
-                    <Route path = { process.env.PUBLIC_URL + "/skills"} element = { <SkillsIndex /> } />
-                    <Route path = { process.env.PUBLIC_URL + "/projects"} element = { <ProjectsIndex /> } />
-                    <Route path = { process.env.PUBLIC_URL + "/contactMe"} element = { <ContactIndex /> } />
-                    {/* <Route path = "*" element = { <NotFound /> }></Route> */}
+                    <Route exact path = "/" element = { <HomeIndex /> } />
+                    <Route exact path = "/aboutMe" element = { <AboutIndex /> } />
+                    <Route exact path = "/skills" element = { <SkillsIndex /> } />
+                    <Route exact path = "/projects" element = { <ProjectsIndex /> } />
+                    <Route exact path = "/contactMe" element = { <ContactIndex /> } />
+                    {/* <Route path = "*" element = { <NotFound /> } /> */}
                 </Routes>
             </AnimatePresence>
             <div className = "noise"></div>

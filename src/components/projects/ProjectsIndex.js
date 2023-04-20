@@ -82,12 +82,19 @@ const ProjectsIndex = () => {
             </div>
             <div id = "backdrop" onClick = { () => modalHandler("") } className = "fixed w-full h-full top-0" style = {{ "zIndex": "-1", }}></div>
             <div id = "modal" className = "fixed min-h-screen h-full w-full overflow-y-scroll scroll" style = {{ "top": "100%", "zIndex": "3" }}>
-                <div id="modalContent" className = "bg-white min-h-full duration-200 border-top rounded-t-[100px] px-24 py-20 mt-24">
-                    {
-                        (modal === "checkerz" && <Checkerz />) ||
-                        (modal === "musicGenre" && <MusicGenre />) ||
-                        (modal === "servicePro" && <ServicePro />)
-                    }
+                <div id="modalContent" className = "bg-white min-h-full duration-200 border-top rounded-t-[100px] pb-20 pt-10 mt-24">
+                    <div className = "flex justify-end px-12">
+                        <button className="text-4xl border rounded-full h-12 w-12" onClick = { () => modalHandler("") }>
+                            <span className = "relative bottom-1">&times;</span>
+                        </button>
+                    </div>
+                    <div className = "px-24">
+                        {
+                            (modal === "checkerz" && <Checkerz />) ||
+                            (modal === "musicGenre" && <MusicGenre />) ||
+                            (modal === "servicePro" && <ServicePro />)
+                        }
+                    </div>
                 </div>
             </div>
         </motion.div>
