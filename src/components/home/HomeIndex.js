@@ -12,7 +12,7 @@ const HomeIndex = () => {
         <motion.div className = "w-screen min-h-screen flex items-center" variants = { containerVariant } initial = "initial" animate = "animate" exit = "exit">
             <div className = "float-left w-full h-full flex justify-center items-center">
                 <div className = "md:w-5/12 w-3/4">
-                    <div className = "font-bold font-mono silkscreen text-white mb-5">Hey, I'm <span className = "color5">Vivek Joshi</span> (𝒱𝒾𝓋𝑒𝓀𝒥𝑜𝓈𝒽𝒾).</div>
+                    <div className = "font-bold font-mono silkscreen text-white mb-5">Hey, I'm <span className = "color5">Vivek Joshi</span></div>
                     <h2 className = "lg:text-5xl md:text-3xl text-3xl font-black text-white mb-5">
                         <div className = "mb-1">My passion is</div>
                         bringing ideas to Life.

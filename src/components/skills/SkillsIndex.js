@@ -30,7 +30,6 @@ const SkillsIndex = () => {
 
     const loadSkill = async (loader) => {
         if(exec.executing) return;
-        console.log(loader);
         var len = loader.length - 1;
         for(var i = 0; i < len; i++)
             await sendMessage(loader[i]["type"], loader[i]["msg"], loader[i]["waitFor"]);

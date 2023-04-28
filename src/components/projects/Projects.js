@@ -1,3 +1,7 @@
+import Checkerz from "./projects/Checkerz";
+import MusicGenre from "./projects/MusicGenre";
+import ServicePro from "./projects/ServicePro";
+
 //? The color and it's hover effect values need to be included to the tailwind.config.js files safelist.
 export const projects = [
     {
@@ -7,7 +11,8 @@ export const projects = [
         "tags": ["Javascript", "NPM", "Validation"],
         "img": "/img/Projects/checkerz/logo.png",
         "link": "https://github.com/vivekjoshi556/Music-Genre-Classification",
-        "color": "#cc3534"
+        "color": "#cc3534",
+        "render": <Checkerz />
     },
     {
         "name": "Music Genre Classification",
@@ -17,6 +22,7 @@ export const projects = [
         "img": "/img/Projects/musicGenre/logo.jpg",
         "link": "https://github.com/vivekjoshi556/Music-Genre-Classification",
         "color": "#00a547",
+        "render": <MusicGenre />
     },
     {
         "name": "Service Provider Application",
@@ -24,7 +30,8 @@ export const projects = [
         "description": "Service Provider applications where users could get any service they wanted, like plumbing, salon services, deliveries, laundry Service, Car Wash and many others. At the same time provides could provide these services and earn money.",
         "tags": ["Laravel", "Tailwind CSS", "Livewire", "Google Maps API", "Stripe Payment Gateway"],
         "img": "/img/Projects/service/logo.png",
-        "link": "https://phpstack-442692-2074255.cloudwaysapps.com/",
+        "link": "javascript:void(0)",
         "color": "#0d51ae",
+        "render": <ServicePro />
     },
 ];

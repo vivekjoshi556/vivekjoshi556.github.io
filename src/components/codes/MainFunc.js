@@ -27,6 +27,12 @@ const MainFunc = () => {
         await sendMessage("msg", "Executing Your Code...");
         await sendMessage("msg", "Studying", 500);
         await sendMessage("msg", "Playing Games");
+        await sendMessage("msg", "2016: Completed 12th");
+        await sendMessage("msg", "2016: Started Bachelor's in ECE from NPSEI Pithoragarh.");
+        await sendMessage("msg", "2020: Completed Bachelors.");
+        await sendMessage("learning", "2020: Part-Time Freelancing.", 1000);
+        await sendMessage("msg", "2021: Started Masters in IT from IIIT Allahabad.", 1000);
+        await sendMessage("msg", "2023: Trying to finish Master's Thesis.", 1000);
         await sendMessage("warning", "['Unemployed']", 1000, false);
     }
 
@@ -96,7 +102,7 @@ const MainFunc = () => {
                 {
                     exec.executing && 
                     <button className = "bg-green-600 text-white hover:bg-green-600 opacity-60 py-1 mt-1 px-3 ml-1 rounded mb-2 cursor-not-allowed aboveNoise">
-                        <FontAwesomeIcon className = "fa-spin w-4 dark:text-gray-300" icon = { faGear }></FontAwesomeIcon> Execute
+                        <FontAwesomeIcon className = "fa-spin w-4 dark:text-gray-300" icon = { faGear }></FontAwesomeIcon> Executing
                     </button>
                 }
             </div>

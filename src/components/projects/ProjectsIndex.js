@@ -3,9 +3,6 @@ import { useState, useEffect } from "react";
 import { containerVariant } from "../variants";
 import ProjectBox from "./ProjectBox";
 import { projects } from "./Projects";
-import Checkerz from "./projects/Checkerz";
-import MusicGenre from "./projects/MusicGenre";
-import ServicePro from "./projects/ServicePro";
 
 const ProjectsIndex = () => {
     const [modal, toggleModal] = useState("");
@@ -54,12 +51,17 @@ const ProjectsIndex = () => {
         }
         
         const scrollEventHandler = event => {
-            if(event.target.scrollTop >= 45) document.getElementById("modalContent").classList.remove("rounded-t-[100px]");
-            else document.getElementById("modalContent").classList.add("rounded-t-[100px]");
+            if(event.target.scrollTop >= 45) {
+                document.getElementById("modalContent").classList.remove("rounded-t-[40px]", "md:rounded-t-[100px]");
+                document.getElementById("closingBtn").classList.add("border", "border-gray-300", "shadow-lg", "shadow-gray-300", "rounded-full");
+            }
+            else {
+                document.getElementById("modalContent").classList.add("md:rounded-t-[100px]", "rounded-t-[40px]");
+                document.getElementById("closingBtn").classList.remove("border", "border-gray-300", "shadow-lg", "shadow-gray-300", "rounded-full");
+            }
         }
 
         document.getElementById("modal").addEventListener("scroll", scrollEventHandler);
-
         document.addEventListener("keydown", keyDownEventHandler);
         
         return () => {
@@ -69,7 +71,6 @@ const ProjectsIndex = () => {
 
     return (
         <motion.div className = "min-h-screen mx-auto relative" variants = { containerVariant } initial = "initial" animate = "animate" exit = "exit">
-            {/*  */}
             <div className = "w-full dark:bg-gray-800 md:px-10 lg:px-32 px-8 h-full pt-24 md:pt-32 items-center flex flex-col">
                 <h2 className = "text-3xl font-bold md:mb-4 font-mono silkscreen glitch text-white w-full" data-text = "Project Index">Project Index</h2>
                 <div className="flex flex-wrap">
@@ -81,20 +82,24 @@ const ProjectsIndex = () => {
                 </div>
             </div>
             <div id = "backdrop" onClick = { () => modalHandler("") } className = "fixed w-full h-full top-0" style = {{ "zIndex": "-1", }}></div>
-            <div id = "modal" className = "fixed min-h-screen h-full w-full overflow-y-scroll scroll" style = {{ "top": "100%", "zIndex": "3" }}>
-                <div id="modalContent" className = "bg-white min-h-full duration-200 border-top rounded-t-[100px] pb-20 pt-10 mt-24">
-                    <div className = "flex justify-end px-12">
-                        <button className="text-4xl border rounded-full h-12 w-12" onClick = { () => modalHandler("") }>
+            <div id = "modal" className = "fixed min-h-screen h-full w-full overflow-y-scroll scroll" style = {{ "top": "100%", "zIndex": "10" }}>
+                <div id="modalContent" className = "bg-white aboveNoise min-h-full w-full duration-200 border-top rounded-t-[40px] md:rounded-t-[100px] pb-20 pt-10 mt-24"> 
+                    <div className = "flex justify-end md:mr-4 mr-2 sticky md:top-24 top-16">
+                        <motion.button 
+                            id = "closingBtn" 
+                            title = "Press Esc" 
+                            className = "md:text-4xl text-3xl duration-100 md:h-12 md:w-12 w-10 h-10 relative md:left-0 left-1" 
+                            onClick = { () => modalHandler("") }
+                            whileHover = {{ scale: 1.2 }}
+                            transition = {{ type: "spring", stiffness: 1000, damping: 5 }}
+                        >
                             <span className = "relative bottom-1">&times;</span>
-                        </button>
+                        </motion.button>
                     </div>
-                    <div className = "px-24">
-                        {
-                            (modal === "checkerz" && <Checkerz />) ||
-                            (modal === "musicGenre" && <MusicGenre />) ||
-                            (modal === "servicePro" && <ServicePro />)
-                        }
+                    <div className = "md:px-20 px-16">
+                        { modal !== "" && projects.find((project) => project.codename === modal)?.render }
                     </div>
+                    
                 </div>
             </div>
         </motion.div>

@@ -6,7 +6,6 @@ import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-console.log(process.env.REACT_APP_PUBLIC_URL);
 root.render(
     // <React.StrictMode>
     <BrowserRouter>

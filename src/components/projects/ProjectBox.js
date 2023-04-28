@@ -1,6 +1,8 @@
+import { motion } from "framer-motion";
+
 const ProjectBox = props => {
     const project = props.project;
-    const btnProps = "bg-[" + project.color + "A0] hover:bg-[" + project.color + "] duration-500 text-white px-4 py-2 mt-3 rounded-full focus:outline-none";
+    const btnProps = "bg-[" + project.color + "A0] hover:bg-[" + project.color + "] duration-100 text-white px-4 py-2 mt-3 rounded-full focus:outline-none";
     return (
         <div className = "md:flex text-gray-200 rounded-xl p-8 md:p-0 aboveNoise mb-8 sm:mb-24 w-full">
             {
@@ -32,7 +34,14 @@ const ProjectBox = props => {
                     </div>
                 </div>
                 <div className = "flex justify-start">
-                    <button onClick = { () => props.modalHandler(project.codename) } className = { btnProps }> Read More... </button>
+                    <motion.button 
+                        onClick = { () => props.modalHandler(project.codename) } 
+                        className = { btnProps }
+                        whileHover = {{ scale: 1.1 }}
+                        transition = {{ type: "spring", stiffness: 1000, damping: 5 }}
+                    > 
+                        Read More... 
+                    </motion.button>
                 </div>
             </div>
             {
