@@ -2,10 +2,15 @@
 // import { faRecycle, faCode, faFeather, faHandPointer, faHeartbeat, faBroom } from "@fortawesome/free-solid-svg-icons";
 
 const MusicGenre = () => {
-    return (
-        <div>
-            <h2 className = "text-xl font-bold glitch inline-block" data-text = "This&nbsp;Part&nbsp;is&nbsp;Under&nbsp;Construction.">This Part is Under Construction.</h2>
-            {/* <h2 className = "mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Problem Statement:</h2>
+	return (
+		<div>
+			<h2
+				className="text-xl font-bold glitch inline-block"
+				data-text="This&nbsp;Part&nbsp;is&nbsp;Under&nbsp;Construction."
+			>
+				This Part is Under Construction.
+			</h2>
+			{/* <h2 className = "mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Problem Statement:</h2>
             <p className = "pl-8 text-sm">
                 The problem was to train a model using Machine Learning techniques that could take in an music audio file and find out the genre of the song. This project was done as a coursework project in my Master's degree Machine Learning course with a team of three individuals. The main goal was to get idea an idea on how to work on Machine Learning Projects and various parts of the process.
             </p>
@@ -91,9 +96,8 @@ const MusicGenre = () => {
                 <li>Pick & Place option so you don't have to format the object before sending it for Validation.</li>
                 <li>Option to use automatic typecasting of values if the types don't match.</li>
             </ul> */}
-
-        </div>
-    );
-}
+		</div>
+	);
+};
 
 export default MusicGenre;
