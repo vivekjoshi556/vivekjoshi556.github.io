@@ -1,29 +1,25 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-	faRecycle,
-	faClock,
-	faDollar,
-	faScrewdriverWrench,
 	faMoneyBillTransfer,
-	faRocket,
+	faDesktop,
+	faBell,
+	faSearch,
+	faLink,
+	faExpandAlt,
 } from '@fortawesome/free-solid-svg-icons';
 import SlideShow from '../../util/slideShow';
 
-const ServicePro = () => {
+export default function AuctionTruckers() {
 	return (
 		<div className="aboveNoise">
 			<h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
 				Problem Statement:
 			</h2>
 			<p className="pl-8 text-sm">
-				The problem was the need for a versatile Service Provider Application
-				that could connect users with a diverse range of service providers,
-				including plumbing, salon services, deliveries, laundry, and many
-				others, while also providing a platform for service providers to offer
-				their expertise and earn income. The challenge was to create an
-				efficient and user-friendly solution that catered to both sides of this
-				equation, offering a seamless experience and opportunities for service
-				providers to thrive.
+				The task was to develop a truck trading platform as part of a
+				freelancing project. While existing platforms already existed in the
+				market, the goal was to create a functional and user-friendly solution
+				for buying and selling trucks with better support user support.
 			</p>
 			<br />
 
@@ -31,10 +27,17 @@ const ServicePro = () => {
 				Proposed Solution:
 			</h2>
 			<p className="pl-8 text-sm">
-				The proposed solution was to develop a comprehensive website for the
-				Service Provider Application. While the project originally included
-				plans for a mobile app as well, my primary focus and contribution
-				centered around the website's design and functionality.
+				As part of the freelancing project, our proposed solution was to design
+				and develop a dedicated truck trading platform. This platform aimed to
+				provide a straightforward and user-friendly online marketplace for
+				individuals looking to buy or sell trucks. While existing solutions
+				existed, our approach focused on delivering a functional and intuitive
+				platform tailored to the specific needs of truck enthusiasts. Leveraging
+				Next.js, Tailwind CSS, and seamless API integration, we aimed to create
+				a reliable and accessible platform for truck trading. The integration of
+				Stripe.js enabled secure and convenient payment processing, while
+				real-time push notifications, powered by Laravel Echo and Pusher, added
+				a new level of interactivity to the platform.
 			</p>
 			<br />
 			<img
@@ -53,60 +56,60 @@ const ServicePro = () => {
 					<div className="flex h-16 w-16 mt-2 mb-3 justify-center items-center rounded-full bg-purple-100 text-purple-800 mx-auto">
 						<FontAwesomeIcon
 							className="text-4xl dark:text-gray-300"
-							icon={faRecycle}
+							icon={faDesktop}
 						></FontAwesomeIcon>
 					</div>
 					<h3 className="mb-2 general text-center text-xl font-bold dark:text-white">
-						Streamlined Service Selection
+						Intuitive User Interfaces
 					</h3>
 					<p className="text-gray-500 text-center dark:text-gray-400 text-sm">
-						Users can effortlessly browse and select from a wide array of
-						services, all within a user-friendly interface.
+						Auction Truckers boasts meticulously crafted user interfaces, making
+						navigation and truck listing a breeze.
 					</p>
 				</div>
 				<div className="bg-white p-8 rounded-xl border border-gray-50 shadow-xl">
 					<div className="flex h-16 w-16 mt-2 mb-3 justify-center items-center rounded-full bg-orange-100 text-orange-800 mx-auto">
 						<FontAwesomeIcon
 							className="text-4xl dark:text-gray-300"
-							icon={faClock}
+							icon={faBell}
 						></FontAwesomeIcon>
 					</div>
 					<h3 className="mb-2 general text-center text-xl font-bold dark:text-white">
-						Real-Time Tracking
+						Real-time Notifications
 					</h3>
 					<p className="text-gray-500 text-center dark:text-gray-400 text-sm">
-						Stay informed with live updates using Google Maps API, ensuring
-						transparency and efficiency during service.
+						Stay updated with push notifications, enhancing the real-time
+						interactivity of the platform.
 					</p>
 				</div>
 				<div className="bg-white p-8 rounded-xl border border-gray-50 shadow-xl">
 					<div className="flex h-16 w-16 mt-2 mb-3 justify-center items-center rounded-full bg-green-100 text-green-800 mx-auto">
 						<FontAwesomeIcon
 							className="text-4xl dark:text-gray-300"
-							icon={faRocket}
+							icon={faSearch}
 						></FontAwesomeIcon>
 					</div>
 					<h3 className="mb-2 general text-center text-xl font-bold dark:text-white">
-						Effortless Onboarding
+						Comprehensive Search
 					</h3>
 					<p className="text-gray-500 text-center dark:text-gray-400 text-sm">
-						Quick and intuitive profile setup for service providers, reducing
-						administrative hurdles.
+						Users can easily find their ideal trucks using advanced search
+						filters.
 					</p>
 				</div>
 				<div className="bg-white p-8 rounded-xl border border-gray-50 shadow-xl">
 					<div className="flex h-16 w-16 mt-2 mb-3 justify-center items-center rounded-full bg-yellow-100 text-yellow-800 mx-auto">
 						<FontAwesomeIcon
 							className="text-4xl dark:text-gray-300"
-							icon={faDollar}
+							icon={faExpandAlt}
 						></FontAwesomeIcon>
 					</div>
 					<h3 className="mb-2 general text-center text-xl font-bold dark:text-white">
-						Great Earning Opportunities
+						Responsive Design
 					</h3>
 					<p className="text-gray-500 text-center dark:text-gray-400 text-sm">
-						Gain access to a consistent stream of potential clients, translating
-						into a steady income source for service providers.
+						Our platform is designed to work seamlessly across various devices,
+						ensuring accessibility for all users.
 					</p>
 				</div>
 				<div className="bg-white p-8 rounded-xl border border-gray-50 shadow-xl">
@@ -117,26 +120,26 @@ const ServicePro = () => {
 						></FontAwesomeIcon>
 					</div>
 					<h3 className="mb-2 general text-center text-xl font-bold dark:text-white">
-						Efficient Payment Processing
+						Efficient Payment Processing Secure Payments
 					</h3>
 					<p className="text-gray-500 text-center dark:text-gray-400 text-sm">
-						Seamlessly process payments with Stripe, providing secure and
-						convenient transactions.
+						With Stripe.js integration, users can confidently transact and
+						securely process payments.
 					</p>
 				</div>
 				<div className="bg-white p-8 rounded-xl border border-gray-50 shadow-xl">
 					<div className="flex h-16 w-16 mt-2 mb-3 justify-center items-center rounded-full bg-sky-100 text-sky-800 mx-auto">
 						<FontAwesomeIcon
 							className="text-4xl dark:text-gray-300"
-							icon={faScrewdriverWrench}
+							icon={faLink}
 						></FontAwesomeIcon>
 					</div>
 					<h3 className="mb-2 general text-center text-xl font-bold dark:text-white">
-						Completely Customizable
+						Seamless API Integration
 					</h3>
 					<p className="text-gray-500 text-center dark:text-gray-400 text-sm">
-						Tailor the website to your needs with extensive backend
-						customization options for content and theme adjustments.
+						We seamlessly integrated the backend API, ensuring data flows
+						smoothly between the front end and back end.
 					</p>
 				</div>
 			</div>
@@ -148,16 +151,31 @@ const ServicePro = () => {
 			</h2>
 			<ul className="pl-8 list-disc">
 				<li className="mb-3">
-					Language/Framework: Package is built using a popular <b>PHP </b>
-					language framework <b>Laravel</b>.
-				</li>
-				<li className="mb-3">
-					Dynamic UI: <b>Livewire</b> is a full-stack framework for Laravel that
-					makes building dynamic interfaces simple, without leaving the comfort
-					of Laravel.
+					Language/Framework: Package is built using a popular <b>JS </b>
+					language framework <b>Next.js</b>.
 				</li>
 				<li className="mb-3">
 					CSS Framework: <b>TailwindCSS</b> is an open source CSS framework.
+				</li>
+				<li className="mb-3">
+					Payments: <b>Stripe</b> is a suite of APIs powering online payment
+					processing and commerce solutions for internet businesses of all
+					sizes.
+				</li>
+				<li className="mb-3">
+					Notifications:
+					<ul className="pl-5 mt-3 list-[circle]">
+						<li>
+							<b>Laravel Echo</b> - Laravel Echo is a JavaScript library that
+							makes it painless to subscribe to channels and listen for events
+							broadcast by your server-side broadcasting driver.
+						</li>
+						<li>
+							<b>Pusher</b> - Pusher is a hosted API service which makes adding
+							real-time data and functionality to web and mobile applications
+							seamless
+						</li>
+					</ul>
 				</li>
 				<li className="mb-3">
 					Deployment: <b>Github</b> is used for keeping track of the project
@@ -176,8 +194,8 @@ const ServicePro = () => {
 				Teasers:
 			</h2>
 			<SlideShow
-				prefix="service"
-				images={['1.png', '2.png', '3.png', '4.jpg', '5.jpg']}
+				prefix="AuctionTruckers"
+				images={['1.png', '2.png', '3.png', '4.png']}
 			/>
 
 			<br />
@@ -187,29 +205,35 @@ const ServicePro = () => {
 			</h2>
 			<ul className="pl-8 list-disc">
 				<li className="mb-3">
-					Tackling a substantial project with diverse user roles was a
-					significant learning opportunity. It involved not only designing
-					interfaces for varied user needs but also delving into the intricacies
-					of <b>authorization, roles, and permission management</b>. This
-					experience allowed me to gain expertise in effectively controlling
-					access and privileges within the application, enhancing its security
-					and user experience.
+					My initial challenge revolved around Next.js, a powerful framework
+					that seamlessly combines server-side and client-side rendering. As a
+					newcomer to <b>Next.js</b>, it took me some time to fully grasp its
+					routing system and understand where rendering occurred. This learning
+					curve led to a deeper understanding of Next.js's versatility.
 				</li>
 				<li className="mb-3">
-					Venturing into the world of <b>Google Maps API</b> was both exciting
-					and challenging. Learning how to integrate real-time tracking and
-					location services added valuable expertise to my skill set.
+					One of the standout challenges was comprehending the concept of hybrid
+					rendering within Next.js, where pages can be pre-rendered at build
+					time or fetched dynamically on the client side. This dual approach
+					offered a unique blend of performance and flexibility but required
+					careful consideration.
 				</li>
 				<li className="mb-3">
-					Embracing <b>Livewire</b> technology was a new and exciting journey.
-					As Livewire was also a relatively fresh addition to my toolkit,
-					adapting to its capabilities and incorporating <b>dynamic elements</b>{' '}
-					into the website presented a stimulating learning curve.
+					Working with a framework like Next.js introduced me to various data
+					fetching techniques, including server-side rendering (SSR), static
+					site generation (SSG), and client-side rendering (CSR). Adapting to
+					these different methods required mastering the intricacies of each
+					approach, allowing me to select the most suitable method for different
+					parts of the application.
+				</li>
+				<li>
+					Managing the project as a sole front-end developer involved planning,
+					prioritizing tasks, and meeting deadlines effectively. This experience
+					honed my project management skills and reinforced the importance of
+					clear communication and organization.
 				</li>
 			</ul>
 			<br />
 		</div>
 	);
-};
-
-export default ServicePro;
+}

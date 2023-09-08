@@ -1,72 +1,56 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { motion, AnimatePresence, wrap } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
 	faAngleDoubleLeft,
 	faAngleDoubleRight,
 } from '@fortawesome/free-solid-svg-icons';
 
-const variants = {
-	enter: (direction) => {
-		return {
-			zIndex: 10,
-			x: direction > 0 ? '200%' : '-200%',
-		};
-	},
-	center: {
-		x: 0,
-	},
-	exit: (direction) => {
-		return {
-			zIndex: 1,
-			x: direction < 0 ? '200%' : '-200%',
-			transition: {
-				x: { duration: 0.5 },
-			},
-		};
-	},
-};
+function Slideshow({ images, prefix }) {
+	const [index, setIndex] = useState(0);
 
-function Slideshow({ images }) {
-	const [[page, direction], setPage] = useState([0, 0]);
-
-	const imageIndex = wrap(0, images.length, page);
-
-	const paginate = (newDirection) => {
-		setPage([page + newDirection, newDirection]);
-	};
+	function updateIndex(update) {
+		setIndex((old) => {
+			let result;
+			if (update === 1) result = old === images.length - 1 ? 0 : old + 1;
+			else result = (old === 0 ? images.length : old) - 1;
+			return result;
+		});
+	}
 
 	return (
 		<>
-			<div className="flex overflow-x-hidden relative justify-center">
+			<div className="flex overflow-x-hidden md:flex-row flex-col relative justify-center">
+				<img
+					src={'/img/Projects/' + prefix + '/' + images[index]}
+					className="md:max-h-96 max-w-full mx-auto block lg:px-0 rounded-lg border object-contain"
+					alt="ImageNotFound"
+				/>
 				<div
-					className="cursor-pointer next absolute h-10 w-10 rounded-full bg-black text-white bg-opacity-75 top-44 left-0 shadow-xl z-10 flex justify-center items-center"
-					onClick={() => paginate(1)}
+					className="cursor-pointer md:flex hidden absolute h-10 w-10 rounded-full bg-black text-white bg-opacity-75 top-[45%] left-0 shadow-xl z-10 justify-center items-center"
+					onClick={() => updateIndex(-1)}
 				>
 					<FontAwesomeIcon icon={faAngleDoubleLeft} />
 				</div>
-				<AnimatePresence initial={false} custom={direction}>
-					<motion.img
-						key={page}
-						src={'/img/Projects/service/' + images[imageIndex]}
-						className="h-96 object-contain max-w-full inline-block lg:px-0 px-12 rounded-lg"
-						custom={direction}
-						variants={variants}
-						initial="enter"
-						animate="center"
-						exit="exit"
-						transition={{
-							x: { type: 'spring', stiffness: 100, damping: 15, delay: 0.5 },
-						}}
-					/>
-				</AnimatePresence>
-
 				<div
-					className="cursor-pointer prev absolute h-10 w-10 rounded-full bg-black text-white bg-opacity-75 top-44 right-0 shadow-xl z-10 flex justify-center items-center"
-					onClick={() => paginate(-1)}
+					className="cursor-pointer md:flex hidden absolute h-10 w-10 rounded-full bg-black text-white bg-opacity-75 top-[45%] right-0 shadow-xl z-10 justify-center items-center"
+					onClick={() => updateIndex(1)}
 				>
 					<FontAwesomeIcon icon={faAngleDoubleRight} />
+				</div>
+				<div className="flex flex-row justify-center gap-2 items-center md:hidden mt-3">
+					<div
+						className="cursor-pointer flex h-10 w-10 rounded-full bg-black text-white bg-opacity-75 top-[45%] left-0 shadow-xl z-10 justify-center items-center"
+						onClick={() => updateIndex(1)}
+					>
+						<FontAwesomeIcon icon={faAngleDoubleLeft} />
+					</div>
+					<div
+						className="cursor-pointer flex h-10 w-10 rounded-full bg-black text-white bg-opacity-75 top-[45%] right-0 shadow-xl z-10 justify-center items-center"
+						onClick={() => updateIndex(-1)}
+					>
+						<FontAwesomeIcon icon={faAngleDoubleRight} />
+					</div>
 				</div>
 			</div>
 		</>
