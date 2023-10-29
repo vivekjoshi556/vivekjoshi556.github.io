@@ -1,4 +1,4 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faMoneyBillTransfer,
 	faDesktop,
@@ -6,8 +6,8 @@ import {
 	faSearch,
 	faLink,
 	faExpandAlt,
-} from '@fortawesome/free-solid-svg-icons';
-import SlideShow from '../../util/slideShow';
+} from "@fortawesome/free-solid-svg-icons";
+import SlideShow from "../../util/slideShow";
 
 export default function AuctionTruckers() {
 	return (
@@ -42,7 +42,7 @@ export default function AuctionTruckers() {
 			<br />
 			<img
 				className="w-full md:w-3/4 mx-auto border border-gray-100 shadow-xl rounded-xl"
-				src="/img/Projects/service/logo.png"
+				src="/img/Projects/AuctionTruckers/logo.png"
 				alt=""
 			/>
 			<br />
@@ -195,7 +195,7 @@ export default function AuctionTruckers() {
 			</h2>
 			<SlideShow
 				prefix="AuctionTruckers"
-				images={['1.png', '2.png', '3.png', '4.png']}
+				images={["1.png", "2.png", "3.png", "4.png"]}
 			/>
 
 			<br />

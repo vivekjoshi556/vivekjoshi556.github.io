@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faRecycle,
 	faCode,
@@ -7,7 +7,7 @@ import {
 	faHandPointer,
 	faHeartbeat,
 	faBroom,
-} from '@fortawesome/free-solid-svg-icons';
+} from "@fortawesome/free-solid-svg-icons";
 
 const Checkerz = () => {
 	return (
@@ -46,7 +46,7 @@ const Checkerz = () => {
 					href="https://npmjs.org/package/checkerz"
 					target="_blank"
 					whileHover={{ scale: 1.1 }}
-					transition={{ type: 'spring', stiffness: 1000, damping: 5 }}
+					transition={{ type: "spring", stiffness: 1000, damping: 5 }}
 				>
 					Check Out Checkerz
 				</motion.a>
@@ -55,7 +55,7 @@ const Checkerz = () => {
 					href="https://github.com/vivekjoshi556/checkerz"
 					target="_blank"
 					whileHover={{ scale: 1.1 }}
-					transition={{ type: 'spring', stiffness: 1000, damping: 5 }}
+					transition={{ type: "spring", stiffness: 1000, damping: 5 }}
 				>
 					Contribute to the Project
 				</motion.a>
